@@ -4,4 +4,5 @@ class UniversesController < ApplicationController
 
   def show
   end
+
 end

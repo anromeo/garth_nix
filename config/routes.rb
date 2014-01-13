@@ -1,13 +1,14 @@
 GarthNix::Application.routes.draw do
 
   devise_for :users
-  root "home#index"
+  root "universes#index"
 
   resources :questions
   resources :universes
 
   get "biography" => "home#biography", as: :biography
   get "contact" => "home#contact", as: :contact
+  get "books" => "books#index", as: :books
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
