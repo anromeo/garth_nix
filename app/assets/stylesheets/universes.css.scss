@@ -31,7 +31,26 @@ $em-base: 16 !default;
   color: #d4af37;
 }
 
+.universe-div{
+  text-align: center;
+  opacity: .6;
+  padding: 5px 0px 10px 0px;
+}
+.universe-div:hover{
+  text-align: center;
+  opacity: 1;
+}
+.universe-div-clicked{
+  background-color: #141C15; 
+  position: absolute;
+  opacity: 1;
+  text-align: left;
+  color: #d4af37;
+}
 .universe-header{
   color: #111;
   font-size: emCalc(15);
+}
+.universes-container{
+  position: relative;
 }

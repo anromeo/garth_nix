@@ -1,24 +1,35 @@
-<div class="row">
-  <h1 class="subheader">Choose a Universe to Explore</h1>
-  <section class="row">
-    <div class="small-3 columns ">
+<h1 class="subheader">Choose a Universe to Explore</h1>
+<section class="row" id="universes-container">
+  <%= link_to universes_old_kingdom_path, class: "universes-link" do %>
+    <div class="small-3 columns universe-div">
       <h2 class="universe-header">
        The Old Kingdom
       </h2>
+      <%= image_tag "lirael.jpeg" %>
     </div>
-    <div class="small-3 columns ">
+  <% end %>
+  <%= link_to universes_aenir_path, class: "universes-link" do %>
+    <div class="small-3 columns universe-div">
       <h2 class="universe-header">
         The Seventh Tower
       </h2>
+      <%= image_tag "thefall.jpeg" %>
     </div>
-    <div class="small-3 columns ">
+  <% end %>
+  <%= link_to universes_the_house_path, class: "universes-link" do %>
+    <div class="small-3 columns universe-div">
       <h2 class="universe-header">
         The Keys to the Kingdom
       </h2>
+      <%= image_tag "mistermonday.jpeg" %>
     </div>
-    <div class="small-3 columns ">
+  <% end %>
+  <%= link_to universes_trouble_twisters_path, class: "universes-link" do %>
+    <div class="small-3 columns universe-div">
       <h2 class="universe-header">
         Trouble Twisters
       </h2>
+      <%= image_tag "troubletwisters.jpeg" %>
     </div>
-</div>
+  <% end %>
+</section>

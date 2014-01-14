@@ -6,6 +6,10 @@ GarthNix::Application.routes.draw do
   resources :questions
   resources :universes
 
+  get "old_kingdom" => "universes#old_kingdom", as: :universes_old_kingdom
+  get "the_house" => "universes#the_house", as: :universes_the_house
+  get "aenir" => "universes#aenir", as: :universes_aenir
+  get "trouble_twisters" => "universes#trouble_twisters", as: :universes_trouble_twisters
   get "biography" => "home#biography", as: :biography
   get "contact" => "home#contact", as: :contact
   get "books" => "books#index", as: :books
