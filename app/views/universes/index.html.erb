@@ -1,11 +1,14 @@
 <h1 class="subheader">Choose a Universe to Explore</h1>
-<section class="row" id="universes-container">
+<section class="row" id="universes">
   <%= link_to universes_old_kingdom_path, class: "universes-link" do %>
     <div class="small-3 columns universe-div">
-      <h2 class="universe-header">
+      <h2>
        The Old Kingdom
       </h2>
-      <%= image_tag "lirael.jpeg" %>
+      <%= image_tag "lirael.jpeg" %><br /><br />
+      <div class="universe-button-div">
+        <button>Exit</button>
+      </div>
     </div>
   <% end %>
   <%= link_to universes_aenir_path, class: "universes-link" do %>

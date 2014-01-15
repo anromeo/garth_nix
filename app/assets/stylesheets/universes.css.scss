@@ -31,6 +31,9 @@ $em-base: 16 !default;
   color: #d4af37;
 }
 
+#universes{
+  position: relative;
+}
 .universe-div{
   text-align: center;
   opacity: .6;
@@ -41,16 +44,43 @@ $em-base: 16 !default;
   opacity: 1;
 }
 .universe-div-clicked{
+  width: 100%;
   background-color: #141C15; 
   position: absolute;
   opacity: 1;
   text-align: left;
-  color: #d4af37;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 7px solid #d4af37;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
 }
-.universe-header{
-  color: #111;
+.universe-button-div{
+  text-align: center;
+  display: none;
+}
+#universes h2{
+  color: #CCC;
   font-size: emCalc(15);
 }
-.universes-container{
-  position: relative;
+#universes button{
+  width: 100%;
+  max-width: emCalc(125);
+  border-left: 0;
+  border-right: 0;
+  color: #FFF;
+  background-color: green;
+  opacity: .7;
+  text-transform: uppercase;
+}
+#universes button:hover{
+  width: 100%;
+  max-width: emCalc(125);
+  border-left: 0;
+  border-right: 0;
+  color: #FFF;
+  background-color: green;
+  opacity: 1;
 }
