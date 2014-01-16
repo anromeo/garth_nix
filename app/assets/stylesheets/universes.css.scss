@@ -44,6 +44,7 @@ $em-base: 16 !default;
   opacity: 1;
 }
 .universe-div-clicked{
+  z-index: 1;
   width: 100%;
   background-color: #141C15; 
   position: absolute;
