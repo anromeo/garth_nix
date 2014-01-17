@@ -1,16 +1,18 @@
 <h1 class="subheader">Choose a Universe to Explore</h1>
 <section class="row" id="universes">
   <%= link_to universes_old_kingdom_path, class: "universes-link" do %>
-    <div class="small-3 columns universe-div">
-      <h2>
-       The Old Kingdom
-      </h2>
-      <%= image_tag "lirael.jpeg" %><br /><br />
-      <div class="universe-button-div">
-        <button>Exit</button>
+    <div class="universe-div">
+      <div class="small-3 columns">
+        <h2>
+         The Old Kingdom
+        </h2>
+        <%= image_tag "lirael.jpeg" %><br /><br />
       </div>
     </div>
-  <% end %>
+    <div class="universe-button-div">
+      <button>Exit</button>
+    </div>
+    <% end %>
   <%= link_to universes_aenir_path, class: "universes-link" do %>
     <div class="small-3 columns universe-div">
       <h2 class="universe-header">
@@ -28,11 +30,16 @@
     </div>
   <% end %>
   <%= link_to universes_trouble_twisters_path, class: "universes-link" do %>
-    <div class="small-3 columns universe-div">
-      <h2 class="universe-header">
-        Trouble Twisters
-      </h2>
-      <%= image_tag "troubletwisters.jpeg" %>
+    <div class="universe-div">
+      <div class="small-3 columns">
+        <h2 class="universe-header">
+          Trouble Twisters
+        </h2>
+        <%= image_tag "troubletwisters.jpeg" %>
+      </div>
+      <div class="universe-button-div">
+        <button>Exit</button>
+      </div>
     </div>
   <% end %>
 </section>

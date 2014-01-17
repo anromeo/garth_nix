@@ -9,7 +9,7 @@ $(->
     if $(".universe-button-div").is(":hidden")
       $this = $(@)
       $this.removeClass("universe-div").addClass("universe-div-clicked").animate({"padding": "10px"}, 1000)
-      $this.children(".universe-button-div").show()
+      $this.next(".universe-button-div").show()
     else
       $(".universe-button-div").hide()
 
