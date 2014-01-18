@@ -1,0 +1,16 @@
+<h1 class="subheader">
+  Contact Garth Nix
+</h1>
+<div class="small-3 columns">
+  <p>
+    Want to send Garth a message?
+    Fill out the form.
+  </p>
+</div>
+<div class="small-9 columns">
+  <%= form_tag "/contact", method: :post do %>
+    Name <%= text_field_tag "name" %>
+    Email <%= email_field_tag "email" %>
+    Message <%= text_area_tag "message", nil, class: 'contact-message-input', rows: 10 %>
+  <% end %>
+</div>
