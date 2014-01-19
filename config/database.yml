@@ -17,7 +17,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: nix_db
+  database: nix_db_test
   pool: 5
   username: <%= ENV['db_user'] %>
   password:
