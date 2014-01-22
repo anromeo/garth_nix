@@ -12,7 +12,9 @@ GarthNix::Application.routes.draw do
   get "trouble_twisters" => "universes#trouble_twisters", as: :universes_trouble_twisters
   get "biography" => "home#biography", as: :biography
   get "contact" => "home#contact", as: :contact
+  post "email" => "home#email", as: :contact_garth
   get "books" => "books#index", as: :books
+  get "thanks" => "home#thanks", as: :thanks
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
