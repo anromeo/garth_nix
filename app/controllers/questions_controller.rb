@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   def index
     @error_messages = flash[:notice]
     @question = Question.new
-    @questions = Question.all
+    @questions = Question.where(a: !nil)
   end
 
   def create
@@ -19,6 +19,9 @@ class QuestionsController < ApplicationController
   def thanks
   end
 
+  def edit
+    @question = Question.find(params[:question])
+  end
   private
 
   def question_params

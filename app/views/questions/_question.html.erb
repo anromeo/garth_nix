@@ -4,3 +4,6 @@
 <p>
   <%= question.name %>
 </p>
+<% if current_user %>
+  <%= link_to "Answer", edit_question_path(question) %>
+<% end %>

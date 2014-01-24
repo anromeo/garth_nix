@@ -14,7 +14,7 @@ feature "email author" do
     open_email "garth@garthnix.com", with_subject: "A Message from Phillip Jackson"
     current_email.should have_content("Hey Garth,")
     current_email.should have_content("A message has arrived from Phillip Jackson.")
-    current_email.should have_content("Here's the message:")
+    current_email.should have_content("Here's the message")
     current_email.should have_content("What's up?")
   end
 end

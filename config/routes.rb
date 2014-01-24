@@ -15,6 +15,7 @@ GarthNix::Application.routes.draw do
   post "email" => "home#email", as: :contact_garth
   get "books" => "books#index", as: :books
   get "thanks" => "home#thanks", as: :thanks
+  get "users" => "users#index", as: :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
