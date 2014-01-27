@@ -1,0 +1,6 @@
+<h1 class="subheader">Question</h1>
+<h2 class="subheader"><%= @question.q %></h2>
+<%= form_for @question do |f| %>
+  Answer <%= f.text_field :a %>
+  <%= f.submit "Answer" %>
+<% end %>

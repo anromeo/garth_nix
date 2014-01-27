@@ -1,9 +1,11 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!, only: :edit
+  before_action :set_question, only: [:edit, :update]
 
   def index
     @error_messages = flash[:notice]
     @question = Question.new
-    @questions = Question.where(a: !nil)
+    @questions = Question.where("a is not null")
   end
 
   def create
@@ -20,11 +22,24 @@ class QuestionsController < ApplicationController
   end
 
   def edit
-    @question = Question.find(params[:question])
   end
+
+  def update
+    respond_to do |format|
+      if @question.update_attributes(question_params)
+        format.html {redirect_to questions_path, notice: "You've answered this question"}
+      else
+        format.html {render action: "update", alert: "There was a problem, and the question wasn't answered."}
+      end
+    end
+  end
+
   private
 
+  def set_question
+    @question = Question.find(params[:id])
+  end
   def question_params
-    params.require(:question).permit(:name, :q, :email)
+    params.require(:question).permit(:name, :q, :email, :a)
   end
 end

@@ -1,9 +1,14 @@
 <p>
-  <%= question.q %>
+  <%= question.name %> asked:
 </p>
 <p>
-  <%= question.name %>
+  <%= question.q %>
 </p>
+<% if question.a.presence %>
+  <%= question.a %>
+<% end %>
+<p>
 <% if current_user %>
-  <%= link_to "Answer", edit_question_path(question) %>
+  <% answer = question.a.presence ? "Change Answer" : "Answer" %>
+  <%= link_to answer, edit_question_path(question.id) %>
 <% end %>
