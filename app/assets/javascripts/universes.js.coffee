@@ -12,7 +12,7 @@ $(->
       $(".universe-button-div").show()
       $this.child(".content").show()
 
-  $(".universe-button-div button").on 'click', ->
+  $("#universe-exit").on 'click', ->
     $this = $(@)
     $(".universe-div-clicked").removeClass("universe-div-clicked").addClass("universe-div").animate({"padding": 0}, 1000)
     $this.parent("div").hide()

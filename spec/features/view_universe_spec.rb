@@ -12,7 +12,7 @@ feature "view universes" do
     page.should have_content "Abhorsen is awesome!"
     find("#universe-exit").click
     page.should_not have_content "Abhorsen is awesome!"
-    find("seventh-tower").click
+    find("#seventh-tower").click
     page.should have_content "The Seventh Tower is awesome!"
     find("#universe-exit").click
     page.should_not have_content "The Seventh Tower is awesome!"
