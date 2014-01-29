@@ -67,6 +67,8 @@ $em-base: 16 !default;
   font-size: emCalc(15);
 }
 #universes button{
+  position: relative;
+  top: -75px;
   width: 100%;
   max-width: emCalc(125);
   border-left: 0;
@@ -84,4 +86,10 @@ $em-base: 16 !default;
   color: #FFF;
   background-color: green;
   opacity: 1;
+}
+.content{
+  color: #FFF;
+}
+.universe-div div.content{
+  display: none;
 }
