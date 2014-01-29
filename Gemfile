@@ -53,6 +53,7 @@ group :test do
   gem 'simplecov', :require => false
   gem 'factory_girl', '2.6.4'
   gem 'email_spec', '1.2.1'
+  gem "spork-rails"
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
