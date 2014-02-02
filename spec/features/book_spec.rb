@@ -46,8 +46,16 @@ feature "garth messes with his books" do
   end
 
   scenario "garth deletes a book" do
+    click_link "Books"
+    click_link "This Cool Book"
+    click_link "Delete"
+    page.should have_content "The book has been deleted."
   end
 
   scenario "an unauthenticated user attempts to delete a book" do
+    click_link "Sign Out"
+    click_link "Books"
+    click_link "This Cool Book"
+    page.should_not have_content "Delete"
   end
 end

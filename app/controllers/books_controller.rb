@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
-  before_action :set_book, only: [:show, :edit, :update]
+  before_action :set_book, only: [:show, :edit, :update, :destroy]
 
   def index
     @books = Book.all.order(:universe_id)
@@ -39,7 +39,7 @@ class BooksController < ApplicationController
 
   def destroy
     if @book.destroy
-      flash[:notice] = "This book was deleted."
+      flash[:notice] = "The book has been deleted."
       redirect_to books_path
     else
       flash[:notice] = "Sorry, book couldn't be deleted."
