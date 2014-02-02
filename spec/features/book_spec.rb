@@ -7,6 +7,7 @@ feature "garth messes with his books" do
     visit "/users/sign_in"
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
+    click_button "Sign in"
     click_link "Books"
     click_link "+ Book"
     fill_in "book[title]", with: "This Cool Book"
@@ -20,19 +21,28 @@ feature "garth messes with his books" do
     click_link "Books"
     page.should_not have_content "+ Book"
     visit "/books/new"
-    page.should have_content "You are not authorized to access that page."
+    page.should have_content "Sign in", "Password"
   end
 
   scenario "garth edits a book" do
-    click_link "Sign Out"
+    visit "/books"
     click_link "This Cool Book"
-    page.should_not have_content "+ Book"
-    visit "/books/new"
-    page.should have_content "You are not authorized to access that page."
- 
+    page.should have_content "Edit"
+    click_link "Edit"
+    page.should have_content "This Cool Book"
+    fill_in "book[title]", with: "Different Book"
+    fill_in "book[description]", with: "New description"
+    click_button "+ Book"
+    page.should have_content "Different Book", "New Description"
   end
 
   scenario "an unauthenticated user attempts to edit a book" do
+    click_link "Sign Out"
+    click_link "Books"
+    click_link "This Cool Book"
+    page.should_not have_content "Edit"
+    visit "/books/1/edit"
+    page.should have_content "Sign in", "Password"    
   end
 
   scenario "garth deletes a book" do

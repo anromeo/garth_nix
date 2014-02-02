@@ -5,6 +5,7 @@ GarthNix::Application.routes.draw do
 
   resources :questions
   resources :universes
+  resources :books
 
   get "old_kingdom" => "universes#old_kingdom", as: :universes_old_kingdom
   get "the_house" => "universes#the_house", as: :universes_the_house
@@ -13,7 +14,6 @@ GarthNix::Application.routes.draw do
   get "biography" => "home#biography", as: :biography
   get "contact" => "home#contact", as: :contact
   post "email" => "home#email", as: :contact_garth
-  get "books" => "books#index", as: :books
   get "thanks" => "home#thanks", as: :thanks
   get "users" => "users#index", as: :users
   # The priority is based upon order of creation: first created -> highest priority.
