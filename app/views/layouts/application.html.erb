@@ -15,6 +15,7 @@
 
   	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
 
+    <link href='http://fonts.googleapis.com/css?family=Belgrano|Elsie|Marko+One' rel='stylesheet' type='text/css'>
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
@@ -65,7 +66,7 @@
         <% if alert %>
           <p class="alert"><%= alert %></p>
         <% end %>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <%= link_to "Sign Out", destroy_user_session_path, class: "right", method: :delete if current_user %>
         <%= yield %>
       </div>
     </div>
