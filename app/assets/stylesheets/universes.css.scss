@@ -45,9 +45,27 @@ footer{
   min-height: 100%;
 }
 #nav-title{
-  color: #d4af37;
+  color: #FFD700;
+  font-family: "Elsie";
+  text-transform: uppercase;
+  font-size: emCalc(30px);
+  text-shadow: 2px 2px 4px #B8860B;
 }
-
+header{
+  border-bottom: 4px solid #B8860B;
+  margin-bottom: emCalc(30px);
+}
+a.nav-link:link{
+  color: #CCC;
+  font-family: "Marko One";
+  text-transform: uppercase;
+}
+a.nav-link:visited{
+  color: #CCC;
+}
+a.nav-link:hover{
+  text-shadow: 2px 2px 4px #FFF;
+}
 #universes{
   position: relative;
 }
