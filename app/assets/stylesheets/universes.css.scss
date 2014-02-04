@@ -38,7 +38,8 @@ footer{
   height: 30px;
   clear: both;
   color: #000;
-  text-align: center;  
+  text-align: center;
+  font-family: "Elsie";
 }
 #wrap{
   margin-bottom: -25px;
@@ -55,15 +56,15 @@ header{
   border-bottom: 4px solid #B8860B;
   margin-bottom: emCalc(30px);
 }
-a.nav-link:link{
+a.nav-link:link,a.nav-link:visited{
   color: #CCC;
   font-family: "Marko One";
   text-transform: uppercase;
 }
-a.nav-link:visited{
-  color: #CCC;
-}
 a.nav-link:hover{
+  text-shadow: 2px 2px 4px #FFF;
+}
+a.nav-link-selected:link{
   text-shadow: 2px 2px 4px #FFF;
 }
 #universes{
