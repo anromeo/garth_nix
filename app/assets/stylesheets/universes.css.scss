@@ -67,6 +67,10 @@ a.nav-link:hover{
 a.nav-link-selected:link{
   text-shadow: 2px 2px 4px #FFF;
 }
+.bio-image{
+  text-align: center;
+  margin: 0 0 emCalc(20px) 0;
+}
 #universes{
   position: relative;
 }
