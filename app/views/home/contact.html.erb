@@ -12,6 +12,6 @@
     Name <%= text_field_tag "name" %>
     Email <%= email_field_tag "email" %>
     Message <%= text_area_tag "message", nil, class: 'contact-message-input', rows: 10 %>
-    <%= submit_tag "Send Message" %>
+    <%= submit_tag "Send Message", id: 'contact-submit' %>
   <% end %>
 </div>
