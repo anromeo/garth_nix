@@ -93,10 +93,20 @@ a.nav-link-selected:link{
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 7px solid #d4af37;
+  border: 4px solid #d4af37;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+}
+.universe-div-clicked img{
+  float: left;
+}
+.universe-div-clicked.content{
+  float: left;
+}
+.universe-header{
+  text-align: center;
+  font-weight: bolder;
 }
 .universe-button-div{
   text-align: center;
@@ -113,8 +123,8 @@ a.nav-link-selected:link{
   max-width: emCalc(125);
   border-left: 0;
   border-right: 0;
-  color: #FFF;
-  background-color: green;
+  color: #000;
+  background-color: transparent;
   opacity: .7;
   text-transform: uppercase;
 }
