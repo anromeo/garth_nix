@@ -100,21 +100,24 @@ a.nav-link-selected:link{
 }
 .universe-div-clicked img{
   float: left;
+  margin: 0 0 0 20px;
 }
-.universe-div-clicked.content{
+.universe-div-clicked .content{
   float: left;
-}
-.universe-header{
-  text-align: center;
-  font-weight: bolder;
+  margin: 0 0 0 20px;
+  color: #FFF;
+  font-family: "Fantasy";
+  font-size: emCalc(20px);
 }
 .universe-button-div{
   text-align: center;
   display: none;
 }
 #universes h2{
+  text-align: center;
+  font-weight: bolder;
   color: #CCC;
-  font-size: emCalc(15);
+  font-size: emCalc(18px);
 }
 #universes button{
   position: relative;
@@ -137,9 +140,6 @@ a.nav-link-selected:link{
   background-color: green;
   opacity: 1;
 }
-.content{
-  color: #FFF;
-}
-.universe-div div.content{
+.universe-div .content{
   display: none;
 }

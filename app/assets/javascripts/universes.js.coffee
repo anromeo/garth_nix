@@ -10,7 +10,6 @@ $(->
       $this = $(@)
       $this.removeClass("universe-div").addClass("universe-div-clicked").animate({"padding": "10px"}, 1000)
       $(".universe-button-div").show()
-      $this.child(".content").show()
 
   $("#universe-exit").on 'click', ->
     $this = $(@)
