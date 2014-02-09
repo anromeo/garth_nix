@@ -86,7 +86,7 @@ a.nav-link-selected:link{
 .universe-div-clicked{
   z-index: 1;
   width: 100%;
-  background-color: #141C15; 
+  background: image-url("universe-background.jpg") #141C15; 
   position: absolute;
   opacity: 1;
   text-align: left;
@@ -108,16 +108,24 @@ a.nav-link-selected:link{
   color: #FFF;
   font-family: "Fantasy";
   font-size: emCalc(20px);
+  background-color: #000;
 }
 .universe-button-div{
   text-align: center;
   display: none;
 }
-#universes h2{
+.universe-div h2{
   text-align: center;
   font-weight: bolder;
   color: #CCC;
   font-size: emCalc(18px);
+}
+.universe-div-clicked h2{
+  text-align: center;
+  font-weight: bolder;
+  color: #FFD700;
+  font-size: emCalc(18px);
+  text-shadow: 2px 2px 4px #B8860B;
 }
 #universes button{
   position: relative;
