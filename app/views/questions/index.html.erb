@@ -1,3 +1,12 @@
-<%= render "form" %>
-
-<%= render @questions %>
+<h1 class="subheader">
+  Ask Garth a Question
+</h1>
+<div class="question-form-div">
+  <%= render "form" %>
+</div>
+<div class="question-div">
+  <h2 class="subheader">
+    Past Questions:
+  </h2>
+  <%= render @questions %>
+</div>
