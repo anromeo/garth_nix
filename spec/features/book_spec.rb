@@ -36,6 +36,14 @@ feature "garth messes with his books" do
     page.should have_content "Different Book", "New Description"
   end
 
+  scenario "garth adds an image to a book" do
+    visit "/books"
+    click_link "This Cool Book"
+    click_link "Edit"
+    attach_file "book[image]", File.expand_path("spec/fixtures/abhorsen.jpeg")
+    click_button "+ Book"
+    page.should have_content("image.jpeg")
+  end
   scenario "an unauthenticated user attempts to edit a book" do
     click_link "Sign Out"
     click_link "Books"

@@ -9,7 +9,7 @@ feature "view universes" do
     page.should_not have_content "The Keys to the Kingdom is awesome!"
     page.should_not have_content "Trouble Twisters is awesome!"
     find("#old-kingdom").click
-    page.should have_content "Abhorsen is awesome!"
+    page.should have_content "Five Great Charters knit the land."
     find("#universe-exit").click
     page.should_not have_content "Abhorsen is awesome!"
     find("#seventh-tower").click
