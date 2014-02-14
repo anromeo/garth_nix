@@ -13,4 +13,16 @@ class UniversesController < ApplicationController
 
   def trouble_twisters
   end
+
+  def new
+  end
+
+  def create
+  end
+
+  private
+
+  def universe_params
+    params.require(:universe).permit(:title, :description)
+  end
 end

@@ -1,2 +1,3 @@
 <%= link_to book.title, book %>
 <%= book.description %>
+<%= image_tag book.cover.url if book.cover.present? %>

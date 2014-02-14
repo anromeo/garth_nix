@@ -40,7 +40,7 @@ feature "garth messes with his books" do
     visit "/books"
     click_link "This Cool Book"
     click_link "Edit"
-    attach_file "book[image]", File.expand_path("spec/fixtures/abhorsen.jpeg")
+    attach_file "book[cover]", File.expand_path("spec/fixtures/abhorsen.jpeg")
     click_button "+ Book"
     page.should have_content("image.jpeg")
   end

@@ -1,5 +1,6 @@
-<%= form_for @book do |f| %>
+<%= form_for @book, html: {multipart: true} do |f| %>
   Title: <%= f.text_field "title" %>
   Description: <%= f.text_area "description" %>
+  <%= f.file_field :cover %>
   <%= f.submit "+ Book" %>
 <% end %>
