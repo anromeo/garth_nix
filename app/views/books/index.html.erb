@@ -1,6 +1,10 @@
 <% if current_user %>
   <%= link_to "+ Book", new_book_path %>
 <% end %>
-<% @books.each do |book| %>
-  <%= render book %>
+<% if @books.present? %>
+  <section id="books">
+    <% @books.each do |book| %>
+      <%= render book %>
+    <% end %>
+  </section>
 <% end %>

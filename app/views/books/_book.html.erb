@@ -1,3 +1,9 @@
-<%= link_to book.title, book %>
-<%= book.description %>
-<%= image_tag book.cover.url if book.cover.present? %>
+<div class="book">
+  <%= image_tag book.cover.url if book.cover.present? %>
+  <div class="description">
+    <h2 class="subheader">
+      <%= link_to book.title, book %>
+    </h2>
+    <%= book.description %>
+  </div>
+</div>

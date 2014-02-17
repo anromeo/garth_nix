@@ -9,3 +9,20 @@ body{
   -moz-background-size: cover;
   background-size: cover;
 }
+#book{
+  width: 100%;
+  overflow: hidden;
+}
+.book{
+  float: left;
+  position: relative;
+  margin: 10px 10px 10px 10px;
+}
+.book .description{
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  bottom: 0;
+}
+.book h2{
+
+}
