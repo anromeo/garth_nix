@@ -1,6 +1,14 @@
 <%= form_for @book, html: {multipart: true} do |f| %>
   Title: <%= f.text_field "title" %>
   Description: <%= f.text_area "description" %>
+  Publisher: <%= f.text_field "publisher" %>
+  Published Date: <%= f.date_field "published_date" %>
+  Universes:
+  <% Universe.all.each do |u| %>
+    <%= f.label :universe_id, u.title %>
+    <%= f.radio_button :universe_id, u.id %>
+  <% end %>
   <%= f.file_field :cover %>
   <%= f.submit "+ Book" %>
+
 <% end %>
